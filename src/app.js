@@ -5,6 +5,7 @@ const express=require('express')
 const path=require('path')
 const hbs=require('hbs')
 const app=express()
+const port=process.env.PORT||3000
 
 const diraddress=path.join(__dirname,'../public')
 const viewpath=path.join(__dirname,'../templates/views')
@@ -93,6 +94,6 @@ app.get('*',(req,res)=>{
 })
 
  
-app.listen(3000,()=>{
-    console.log('process has taken place!')
+app.listen(port,()=>{
+    console.log('process has taken place at'+port)
 })
